@@ -56,6 +56,7 @@ export const createPost = async (newPostData: Omit<Post, 'id' | 'createdAt' | 'h
     return handleResponse(response);
 };
 
+
 export const addReaction = async (postId: string, reaction: 'hearts' | 'flowers'): Promise<Post> => {
     const response = await fetch(`/api/posts/${postId}/react`, {
         method: 'POST',

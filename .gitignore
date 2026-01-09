@@ -1,0 +1,17 @@
+# --- Dependencies ---
+# Ignore all node_modules folders wherever they appear
+node_modules/
+
+# --- Build/Output Folders ---
+# For the client-side build output (Vite 'dist')
+dist/
+build/
+out/
+
+# --- IDE and System Files ---
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+.env

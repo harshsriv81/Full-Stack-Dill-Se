@@ -13,7 +13,8 @@ const getAuthHeaders = () => {
 
 export const suggestEmotionTag = async (content: string): Promise<EmotionTagId | null> => {
   try {
-    const response = await fetch('/api/suggest-tag', {
+    const API_BASE_URL = process.env.VITE_API_BASE_URL || '';
+    const response = await fetch(`${API_BASE_URL}/suggest-tag`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
